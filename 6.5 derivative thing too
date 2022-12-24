@@ -1,0 +1,28 @@
+# 12 - 17-22
+
+    
+import sympy as sym
+from sympy.abc import X
+
+
+f = (X**2 + 1)**0.5
+
+f_prime = sym.diff(f)
+
+print(f_prime)
+
+f = sym.lambdify(X, f)
+f_prime = sym.lambdify(X, f_prime)
+
+numbers = [-4, -3.5, -3, -2.5, -2, -1.5, -1. -0.5,0, 1, 1.5, 2, 2.5, 3, 3.5, 4]
+
+for item in numbers:
+    print(f_prime(item))
+
+
+
+
+
+
+
+   

@@ -1,0 +1,39 @@
+# 12 - 17-22
+
+    
+
+import decimal
+import sympy as sym
+from sympy.abc import X
+
+f = -(X**5) + 10 * X
+
+f_prime = sym.diff(f)
+
+
+f = sym.lambdify(X, f)
+f_prime = sym.lambdify(X, f_prime)
+
+def float_range(start, stop, step):
+  while start < stop:
+    yield float(start)
+    start += decimal.Decimal(step)
+
+numbers = list(float_range(-4, 4.5, '0.5'))
+print(numbers)
+
+
+print(' x          slope at x    sign of slope')
+for item in numbers:
+    if f_prime(item) > 0:
+        sign = 'positive'
+    elif f_prime(item) == 0:
+        sign = 'zero'
+    else:
+        sign = 'negative'
+    
+    result = f'{str(item): <4}'
+    result1 = f'{str(f_prime(item)): <10}'
+
+    print(repr(result) +'|     '  + repr(result1) + '|   '  + sign + '' )
+    

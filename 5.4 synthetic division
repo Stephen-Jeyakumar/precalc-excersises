@@ -1,0 +1,78 @@
+#12-23-2022
+original1=[1, 0, -9]
+original2 =[2, 7, -15]
+original3=[1, -0.5, -3/4, 1]
+original4=[1,-2,-30]
+original5=[2,-1,-10,9]
+original6=[3,-19,20,10]
+
+original = original6
+
+
+divisor = -3
+final = []
+product = 0
+
+for item in original:
+    next = item + product
+    final.append(next)
+    product = next * divisor
+
+print(final)
+
+
+powerOfX = len(original) -1
+firstPowerOfX = len(original) -2
+
+def printTerm(coefficient, powerOfX, firstTerm):
+    #coefficient cannot be 0
+    if not firstTerm:
+        if coefficient > 0:
+            print(' +',end = "") 
+    
+    printCoefficient(coefficient, powerOfX)
+    if powerOfX >= 1:
+        print('x',end = "")
+        if powerOfX > 1:
+            print('^' + str(powerOfX), end = "")
+
+
+def printCoefficient(coefficient, powerOfX):
+    if powerOfX == 0:
+        print(' ' + str(coefficient), end = "")
+        return
+    if coefficient ==1:
+        return
+    if coefficient == -1:
+        print(' - ', end = "")
+    else:
+        print(' '+ str(coefficient), end = "")
+
+'''
+printTerm(-1, 1, True)
+print('')
+printTerm(1, 2, True)
+print('')
+printTerm(1, 2, False)
+print('')
+printTerm(-2, 0, False)
+print('')
+printTerm(2, 3, False)
+'''
+
+firstTerm = True
+powerOfX = len(final) - 2
+for coefficient in final:
+    if coefficient == 0:
+        pass
+    if powerOfX < 0:
+        break
+    printTerm(coefficient, powerOfX, firstTerm)
+    firstTerm = False
+    powerOfX = powerOfX - 1
+
+print('\nremainder = ' + str(final[-1]))
+   
+
+    
+    

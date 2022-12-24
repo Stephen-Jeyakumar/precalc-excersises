@@ -1,0 +1,27 @@
+#12-22-2022
+
+'''
+Write and run a computer program to approximate a solution to
+cos x — x = 0, where 0 < x <pi/2. The program should ask the user to
+enter a small tolerance T, say T = 0.01, and continue to increment x by
+0.001 until |cos x — x| < T. A value of x such that |cos x — x| < T should
+be printed as an approximate solution to the equation cos x — x = 0.
+'''
+
+import math
+import sympy as sym
+from decimal import *
+
+
+Tolerance = Decimal((input("enter tolerance:")))
+x = Decimal(0)
+while True:
+    x = Decimal(x + Decimal(0.001))
+    y = Decimal(abs(Decimal(math.cos(x))-x))
+    if y <= Tolerance:
+        print(x)
+        print(y)
+        break
+    if x >= math.pi / 2:
+        print("Couldn't find the answer, try using a larger value for tolerance.")
+        break

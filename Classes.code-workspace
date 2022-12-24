@@ -1,0 +1,36 @@
+{
+	"folders": [
+		{
+			"name": "Classes",
+			"path": "../Classes"
+		},
+		{
+			"name": "Game",
+			"path": "../Game"
+		},
+		{
+			"name": "Graphs+Chartz",
+			"path": "../Graphs+Chartz"
+		},
+		{
+			"name": "Personal_Programs",
+			"path": "../Personal_Programs"
+		},
+		{
+			"name": "Python_Lessons Basil Habash",
+			"path": "../Python_Lessons Basil Habash"
+		},
+		{
+			"name": "Python_Lessons-Arkadiusz_Wtodarczyk",
+			"path": "../Python_Lessons-Arkadiusz_Wtodarczyk"
+		},
+		{
+			"name": "Python_Lessons-Tony_Staunton",
+			"path": "../Python_Lessons-Tony_Staunton"
+		},
+		{
+			"name": "Random_Programs_things",
+			"path": "."
+		}
+	]
+}

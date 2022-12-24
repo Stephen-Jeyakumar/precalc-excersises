@@ -1,0 +1,24 @@
+#12-12-22
+
+
+import sympy as sym
+from sympy.abc import X
+'''
+f = X**3
+
+f_prime = sym.diff(f)
+
+print(f_prime)
+'''
+x = 0
+h = 0.0001
+
+u = x + h
+
+F = x**3
+Fu = u**3
+
+S = (Fu-F)/h
+SS = abs(S -3 * X**2)
+print(SS)
+
